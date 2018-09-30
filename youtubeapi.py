@@ -42,9 +42,6 @@ def youtube_search(options):
   for search_result in search_response.get('items', []):
     search_videos.append(search_result['id']['videoId'])
   video_ids = ','.join(search_videos)
-  print(search_videos)
-  print("\n\n")
-  print(video_ids)
   # Call the videos.list method to retrieve location details for each video.
   video_response = youtube.videos().list(
     id=video_ids,
