@@ -30,8 +30,8 @@ def youtube_search(options):
   search_response = youtube.search().list(
     q=options.q,
     type='video',
-    location=options.location,
-    locationRadius=options.location_radius,
+    #location=options.location,
+    #locationRadius=options.location_radius,
     part='id,snippet',
     maxResults=options.max_results
   ).execute()
@@ -53,9 +53,11 @@ def youtube_search(options):
 
   # Add each result to the list, and then display the list of matching videos.
   for video_result in video_response.get('items', []):
-    videos.append('%s, (%s,%s)' % (video_result['snippet']['title'],
-                              video_result['recordingDetails']['location']['latitude'],
-                              video_result['recordingDetails']['location']['longitude']))
+    videos.append('%s, %s' % (video_result['snippet']['title']
+                              #video_result['recordingDetails']['location']['latitude'],
+                              #video_result['recordingDetails']['location']['longitude']
+                              video_result
+                              ))
 
   print( 'Videos:\n'+ '\n'.join(videos)+ '\n')
 
