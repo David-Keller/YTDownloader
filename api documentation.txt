@@ -1,5 +1,7 @@
 API documentation
 
+https://developers.google.com/resources/api-libraries/documentation/youtube/v3/python/latest/
+
 google video list
  list(part=None, hl=None, maxWidth=None, locale=None, id=None, onBehalfOfContentOwner=None, regionCode=None, pageToken=None, maxResults=None, chart=None, myRating=None, maxHeight=None, videoCategoryId=None)
 
