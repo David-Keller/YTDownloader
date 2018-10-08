@@ -13,19 +13,20 @@ class VideoData:
 		self.guiUpdate = None
 		
 	def setgui(guiUpdate):
+            self.guiUpdate
 		
 	def setLink(self, link):
 		self.link = link
-		gui()
+		guiUpdate()
 	def setTitle(self, title):
 		self.title = title
-		gui.update()
+		guiUpdate()
 	def setDescription(self, description):
 		self.description = description
-		gui.update()
+		guiUpdate()
 	def setImage(self, image):
 		self.image = image
-		gui.update()
+		guiUpdate()
 		
 	def update():
 		
