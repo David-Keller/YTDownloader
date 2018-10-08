@@ -10,13 +10,13 @@ YOUTUBE_API_VERSION = 'v3'
 import video
 
 class Search:
-    def __init__(self, gui):
+    def __init__(self, guiUpdate):
         self.youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
         self.maxResults = 25
-        self.gui = gui;
-        videos = []
+        self.guiUpdate = guiUpdate;
+        self.videos = []
         for i in range(0, maxResults):
-            videos.append(Video())
+            videos.append(Video(guiUpdate, youtube))
             
     def search(term):
         self.search_results = self.youtube.search().list(
