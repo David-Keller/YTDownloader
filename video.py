@@ -28,6 +28,6 @@ class VideoData:
 		self.image = image
 		guiUpdate()
 		
-	def update():
+	#def update():
 		
 		

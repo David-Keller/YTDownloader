@@ -7,7 +7,7 @@ DEVELOPER_KEY = 'AIzaSyCaFhzv7VDOe1RsKrZq7jQyzIqOmlGafFY'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
 
-import video
+from video import *
 
 class Search:
     def __init__(self, guiUpdate):
@@ -15,8 +15,8 @@ class Search:
         self.maxResults = 25
         self.guiUpdate = guiUpdate;
         self.videos = []
-        for i in range(0, maxResults):
-            videos.append(Video(guiUpdate, youtube))
+        for i in range(0, self.maxResults):
+            self.videos.append(VideoData(guiUpdate, self.youtube))
             
     def search(term):
         self.search_results = self.youtube.search().list(
@@ -25,3 +25,5 @@ class Search:
         part='id,snippet',
         maxResults=self.maxResults
         ).execute()
+        for index in range(0, self.maxResults):
+            self.videos[index].setLink(

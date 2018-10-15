@@ -1,9 +1,9 @@
-import search
-import video
+import search as s
+import video as v
 
 def guiUpdateCallback():
     print("gui Updated")
     
 guiUpdate = guiUpdateCallback
 
-search = Search(guiUpdate)
+search = s.Search(guiUpdate)
